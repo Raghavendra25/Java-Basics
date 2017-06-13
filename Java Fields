@@ -1,0 +1,42 @@
+
+The below is simple program on fields and its behaviour. Learning concepts here.
+
+
+
+
+package SWING; // Package Name
+
+public class Car {
+	
+	// Declared state of the car, the fields mentioned below are encapsulated. 
+  
+	private String brand = "Benz";
+	private String color = null; // The value is declared as null
+	private String model = null; // The value is declared as null
+	
+	// Method to set the color
+	public void setColor(String newColor){
+		this.color = newColor; // this.color here points to the fields declared within the class template or member variable. 
+	}
+	
+  // Method to set the brand name
+	public String setBrand(String newBrand){
+		this.brand = newBrand;
+		return this.brand;
+	}
+
+ 
+  // Main method which compliers look for, Java compiler throws an error if there main method is not declared. 
+  
+	public static void main(String[] args) {
+
+		
+		Practice1 h = new Practice1(); // Created a new instance to store class fields and methods in a heap :-) Sorry. 
+    System.out.println("Brand value before creating an instance: " + h.brand); // Value of the field found before method is executed.
+    String n = h.setBrand("Volvo"); // We set the value of the brand to "Volvo"
+    System.out.println("Brand value before creating an instance: " + n); // Value of the field in heap is changed. 
+		
+
+	}
+
+}
